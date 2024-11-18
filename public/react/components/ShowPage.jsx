@@ -21,7 +21,7 @@ export default function ShowPage({ showPage }) {
             <h1>{showPage.title}</h1>
             <h3>{showPage.content}</h3>
             <p>{showPage.updatedAt}</p>
-            {data ? <p>Written By: {data.name}</p> : <p>Loading...</p>} {/* Show loading while data is fetching */}
+            {data ? <p>Written By: {data.name}</p> : <p>Loading...</p>}
         </>
     )
 }
