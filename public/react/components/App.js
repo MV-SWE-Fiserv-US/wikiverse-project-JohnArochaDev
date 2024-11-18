@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { PagesList } from './PagesList'
+import ShowPage from './ShowPage'
 
-// import and prepend the api url to any fetch calls
 import apiURL from '../api'
 
 export const App = () => {
   const [pages, setPages] = useState([])
+  const [showPage, setShowPage] = useState(null)
 
   async function fetchPages () {
     try {
@@ -25,7 +26,7 @@ export const App = () => {
 		<main>
       <h1>WikiVerse</h1>
 			<h2>An interesting 📚</h2>
-			<PagesList pages={pages} />
+			{showPage ? <ShowPage showPage={showPage}  /> : <PagesList pages={pages} showPage={showPage} setShowPage={setShowPage} />}
 		</main>
   )
 }
