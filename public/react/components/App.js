@@ -26,7 +26,7 @@ export const App = () => {
 		<main>
       <h1>WikiVerse</h1>
 			<h2>An interesting 📚</h2>
-			{showPage ? <ShowPage showPage={showPage}  /> : <PagesList pages={pages} showPage={showPage} setShowPage={setShowPage} />}
+			{showPage ? <ShowPage showPage={showPage} setShowPage={setShowPage}  /> : <PagesList pages={pages} showPage={showPage} setShowPage={setShowPage} />}
 		</main>
   )
 }

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 
-export default function ShowPage({ showPage }) {
+export default function ShowPage({ showPage, setShowPage }) {
 
     const [data, setData] = useState(null)
     const [author, setAuthor] = useState(null)
@@ -14,6 +14,10 @@ export default function ShowPage({ showPage }) {
         setAuthor(authorRes.name)
         setData(res)
 
+    }
+
+    function handleClick() {
+        setShowPage(null)
     }
 
     useEffect(() => {
@@ -30,6 +34,8 @@ export default function ShowPage({ showPage }) {
             <p>{showPage.updatedAt}</p>
             {author ? <p>Written By: {author}</p> : <p>Loading...</p>}
             {data ? <p>#{data.tags[0].name}</p> : <p>Loading...</p>}
+
+            <button onClick={handleClick}>Return to all blogs</button>
         </>
     )
 }
