@@ -96,3 +96,4 @@ const data = await response.json();
     - Add a page via form inputs
     - Delete a page
 5. If you’re done but want to build out your app more, read on! There are still extra credit stretch goals.
+![Alt text](public/images/Figma_basics.png)
