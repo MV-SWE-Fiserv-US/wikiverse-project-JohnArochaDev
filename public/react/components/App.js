@@ -33,7 +33,7 @@ export const App = () => {
       <h1>WikiVerse</h1>
 			<h2>An interesting 📚</h2>
 			{showPage ? <ShowPage showPage={showPage} setShowPage={setShowPage}  /> : <PagesList pages={pages} showPage={showPage} setShowPage={setShowPage} />}
-      <button onClick={handleClick} >{showForm ? 'Cancel' : 'Add Wiki'}</button>
+      {showPage ? '' : <button onClick={handleClick} >{showForm ? 'Cancel' : 'Add Wiki'}</button>}
       {showForm ? <ArticleForm /> : ''}
 		</main>
   )
