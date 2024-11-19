@@ -63,6 +63,10 @@ export default function ArticleForm ({ authorId }) {
       console.error('Error adding article:', error)
       alert('There was an error submitting the form.')
     }
+
+    setTimeout(() => {
+        window.location.reload();
+      }, 300);
   }
 
   return (
