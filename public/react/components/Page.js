@@ -4,7 +4,6 @@ export default function Page({ page, showPage, setShowPage }) {
 
   function handleClick() {
     setShowPage(page)
-    console.log(page)
   }
 
   return <>
