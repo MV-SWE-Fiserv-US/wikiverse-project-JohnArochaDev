@@ -35,7 +35,7 @@ export default function ShowPage({ showPage, setShowPage }) {
             {author ? <p>Written By: {author}</p> : <p>Loading...</p>}
             {data ? <p>#{data.tags[0].name}</p> : <p>Loading...</p>}
 
-            <button onClick={handleClick}>Return to all blogs</button>
+            <button onClick={handleClick}>Back to Wiki List</button>
         </>
     )
 }
